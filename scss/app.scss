@@ -3,7 +3,7 @@
 @import "reset.scss";
 
 /* VERSION: PC */
-#pc-wrap { //layoutdan(LayoutBasic va LayoutHomedan) keldi
+#pc-wrap {
   width: 100%;
   height: 100%;
   .container {
@@ -11,6 +11,5 @@
     width: 1300px;
     margin: 0 auto;
     display: flex;
-    background: rgb(11, 141, 174);
   }
 }
