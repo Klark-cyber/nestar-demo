@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       <PopularProperties />
       <Advertisement />
       <TopProperties />
-      {/* <TopAgents /> */}
+      <TopAgents />
     </Stack>
   );
 };
