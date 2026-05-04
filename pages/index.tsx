@@ -9,9 +9,16 @@ import { NextPage } from "next";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import useDeviceDetect from "@/libs/hooks/useDeviceDetect";
 
 const Home: NextPage = () => {
-  return (
+  // DEVICE: Mobile vs PC yani request yuborgan device pc yoki mobile ekanligini hooklar orqali aniqlaymiz
+  const device = useDeviceDetect();
+
+  if(device === "mobile"){
+    return <Stack>HomepageMobile</Stack>
+  }else{
+    return (
     <Stack className={"home-page"}>
       <TrendProperties />
       <PopularProperties />
@@ -20,6 +27,8 @@ const Home: NextPage = () => {
       <TopAgents />
     </Stack>
   );
+  }
 };
 
 export default withLayoutMain(Home);
+
